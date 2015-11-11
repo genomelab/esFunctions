@@ -1,0 +1,78 @@
+esLoadGermanNbl <-
+function(type = NULL, load_target_subset=TRUE, excludeYprobes=TRUE) {
+  ############################
+  ## Load Function 
+  ## Automatically load target data
+  ## Removes Y chromosome features
+  ###########################
+  
+  ############################################################
+  ## Load the necessary extra functions written by shahab
+  ## And set output dir for figures
+  ############################################################
+  #set_tmp_path()
+  outputdir = ".//Paper//Figures//tsr//"
+  
+  #############################################################
+  ### Part 1
+  ### Load expression profile and annotation file
+  ### Build expressionset class and annotate featureNames
+  ### Uses function (1)
+  #############################################################
+  if(is.null(type) | !(type %in% c('tsr', 'psr', 'avgaffy', 'avgref')) ) {
+    cat("Use type=  (tsr or psr or avgaffy or avgref)
+        tsr: transcript\npsr-probeset\navgaffy-average transcript based on Affy annotation                   \navgref: average transcript based on Refgene")
+    return()
+  }
+  if (type=="tsr") {
+    data_file = ".//data//german//german_expressionset.Rdata"
+    annofile = ".//data//german//Agilent_annotations.Rdata"   # This is from Jana using NIH David
+    #annofile = ".//Annotations//Agilent//Annotation_from_Agilent.Rdata"  # This is from Agilent
+    load(file=fixpath(annofile))
+    load(file=fixpath(data_file))
+    anno = anno[which(anno$probeset_id %in% featureNames(eset)),]   
+    annot = anno[c(1, grep("gene_symbol", colnames(anno)))]
+  }
+  if (type=="avgref"){
+    data_file = ".//data//german//german_expressionset_avgref.Rdata"
+    annofile = ".//data//german//Agilent_annotations.Rdata"
+    load(data_file)
+    load(annofile)
+    anno$probeset_id = anno$gene_symbol
+    anno = anno[which(!duplicated(anno$gene_symbol)),]
+    anno = anno[which(anno$gene_symbol %in% featureNames(eset)),]    
+    annot = anno[c(1, grep("gene_symbol", colnames(anno)))]
+  }
+  if (type=="pctile"){
+    data_file = ".//data//german//german_expressionset_pctile.Rdata"
+    annofile = ".//data//german//Agilent_annotations.Rdata"
+    load(file=fixpath(data_file))
+    load(file=fixpath(annofile))
+    anno$probeset_id = anno$gene_symbol
+    anno = anno[which(!duplicated(anno$gene_symbol)),]
+    anno = anno[which(anno$gene_symbol %in% featureNames(eset)),]    
+    annot = anno[c(1, grep("gene_symbol", colnames(anno)))]
+  }
+  
+
+  #########################
+  ## Remove Chromosome Y data  
+  #########################
+  if(excludeYprobes) {
+    nonYfeatures = anno[!anno$seqname %in% c('chrY'),]$probeset_id
+    if(typeof(featureNames(eset))=='character') nonYfeatures= as.character(nonYfeatures)
+    eset = eset[nonYfeatures,]
+  }
+  
+  
+  #############
+  ## Exclude 4S 
+  #############
+  
+  if (load_target_subset) {
+    eset = eset[,eset[['inss_stage']] != '4S']
+  }
+  
+  annot = anno[c(1, grep("gene_symbol", colnames(anno)))]
+  return(list(eset = eset, anno = anno, annot = annot))
+}

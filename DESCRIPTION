@@ -1,0 +1,27 @@
+Package: esFunctions
+Type: Package
+Title: Expression Set Function Version 413
+Version: 1.0
+Date: 2013-08-11
+Author: Shahab Asgharzadeh
+Maintainer: Shahab Asgharzadeh <shahab@chla.usc.edu>
+LayLoad: Yes
+Description: List of esfunctions to manipulate expressionset class data
+License: GPL-3
+Depends:
+    R (>= 2.15.0),
+    BiocGenerics (>= 0.3.2),
+    Biobase (>= 1.17.0),
+    stringr,
+    ggplot2,
+    survival,
+    cluster,
+    gplots,heatmap.plus,GGally,
+    XML
+Imports:
+    reshape2,
+    AnnotationDbi,
+    Hmisc,
+    NMF,
+    pkgmaker,rms
+RoxygenNote: 5.0.1
