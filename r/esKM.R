@@ -1,3 +1,33 @@
+#' esKM
+#' 
+#' Wrapper for qplot_survival function
+#' 
+#' 
+#' @param es expression set
+#' @param kmtime survival time (assumed to be in years, if not convert it to be
+#' in years)
+#' @param kmcens censor indictor (0 alive, 1 for dead)
+#' @param covar covariate
+#' @param title title of the analysis
+#' @param xtitle title of the x-axis
+#' @param ytitle title of the y-axis
+#' @param kmcolors color palette
+#' @param outputdir outputdir
+#' @param filename filename (use if save is set to \code{TRUE}, default is
+#' \code{FALSE}
+#' @param simplestat If \code{TRUE}, it will write the statistics to display
+#' the text on the plot
+#' @param save use if save is set to \code{TRUE}, default is \code{FALSE}
+#' @note Requires package 'ggplot' and 'serve'. Requires function 'surv',
+#' 'theme_set', and 'ggplot'.
+#' @author Shahab Asgharzadeh
+#' @references "An Introduction to Bioconductor's ExpressionSet Class" \cr Seth
+#' Falcon, Martin Morgan, and Robert Gentleman \cr 6 October, 2006; revised 9
+#' February, 2007 \cr
+#' @examples
+#' 
+#' #esKM(eset, kmtime, kmcens, covar = "covariate_of_interest", title = "KM Plot", xtitle = "Time", ytitle = "Survival", kmcolors = kmPalette, outputdir, filename, simplestat = FALSE, save = FALSE)
+#' 
 esKM <-
 function(es, kmtime, kmcens, covar="", title = "", xtitle="Time", ytitle = "Survival", kmcolors = kmPalette, outputdir, filename, simplestat = FALSE, save=FALSE) {
   

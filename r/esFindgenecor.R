@@ -1,3 +1,27 @@
+#' esFindgenecor
+#' 
+#' Finds nearest genes by variety of correlation types from a expressionset
+#' class
+#' 
+#' 
+#' @param es expression set
+#' @param features gene_symbols or other features of interest
+#' @param numb_corr number of correlations to find
+#' @param abscor Use absolute correlation
+#' @param corrtype correlation type - 'spearman', 'pearson'
+#' @param annotate annotate the data (TRUE//FALSE)
+#' @param Anno annotation to use
+#' @author Shahab Asgharzadeh
+#' @references "An Introduction to Bioconductor's ExpressionSet Class" \cr Seth
+#' Falcon, Martin Morgan, and Robert Gentleman \cr 6 October, 2006; revised 9
+#' February, 2007 \cr
+#' @examples
+#' 
+#' #results <- esFindgenecor(eset, features="features_of_interest", numb_corr = 50, abscor = TRUE, corrtype = "spearman", annotate = TRUE, Anno = annot)
+#' #results
+#' 
+#' 
+#' 
 esFindgenecor <-
 function(es, features, numb_corr = 50, abscor = TRUE, corrtype="spearman", annotate = TRUE, Anno=annot) {
   ##########################

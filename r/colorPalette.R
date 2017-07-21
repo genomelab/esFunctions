@@ -1,3 +1,10 @@
+#' Has a list of color palettes used
+#' 
+#' uses color palettes of interest
+#' 
+#' 
+#' @author Shahab Asgharzadeh
+#' @param n n is the name of the color palette that one needs
 colorPalette = function(n) {
   switch(n,
          "kmPalette" = c('red', 'blue', 'darkgreen', 'black', 'orange', 'yellow4', 'brown', 'purple', 'grey', 'turquoise'),

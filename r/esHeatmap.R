@@ -1,3 +1,45 @@
+#' esHeapmap
+#' 
+#' Takes the features of an expression set and create an annotated heat map
+#' where the rows are the features of the expression set and the columns are
+#' the covariate.
+#' 
+#' 
+#' @param es expression set
+#' @param covar ccovariate
+#' @param rownames Default setting is NULL. Give every feature names. If it is
+#' not set to NULL, the function will label the row names given into the
+#' function and match the feature names.
+#' @param hmapcol Colors based on the heat map. If is specificed as NULL, there
+#' is a default color setting.
+#' @param colorPalette colorPallette has to be a list of vectors, each with
+#' number of colors. By default it creates a recurring list of colors obtained
+#' from global kmPallette, Pallette1, Pallette2 covar should be a list of
+#' characters i.e. c('risk', 'efscens).
+#' @param distfun Default parameter to complete linkage clustering using
+#' euclidean distance measure and you can control this by specifying it by
+#' different functions to hclustFun or disfun, for example Manhattan distance.
+#' @param hclustfun function used to compute the hierarchial clustering when
+#' Rowv or Colv are not dendrograms
+#' @param scale where the data points are centered
+#' @param featurelimit limits you can have
+#' @param cexRow Row axis labeling feature. Specify the tick or text label with
+#' a numeric value
+#' @param ...  This is a placeholder
+#' @note Package NMF must be installed first
+#' @author Shahab Asgharzadeh
+#' @references "An Introduction to Bioconductor's ExpressionSet Class" \cr Seth
+#' Falcon, Martin Morgan, and Robert Gentleman \cr 6 October, 2006; revised 9
+#' February, 2007 \cr
+#' 
+#' http://rss.acs.unt.edu/Rdoc/library/Heatplus/html/heatmap_plus.html
+#' 
+#' http://nmf.r-forge.r-project.org/aheatmap.html
+#' @examples
+#' 
+#' 
+#' #esHeatmap(eset, covar="covariate_of_interest")
+#' 
 esHeatmap = function(es, covar, rownames = NULL , hmapcol = NULL, colorPalette = '', 
                      distfun = "euclidean", hclustfun = "average", scale="none", 
                      featurelimit=5000, cexRow = 0.05 +  1/log10(dim(exprs(es))[1]), ...) {

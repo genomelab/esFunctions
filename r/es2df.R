@@ -1,3 +1,19 @@
+#' es2df
+#' 
+#' Converting Expressionset to a dataframe
+#' 
+#' 
+#' @param es expression set
+#' @author Shahab Asgharzadeh
+#' @references "An Introduction to Bioconductor's ExpressionSet Class" Seth
+#' Falcon, Martin Morgan, and Robert Gentleman \cr 6 October, 2006; revised 9
+#' February, 2007 \cr
+#' @keywords ~kwd1 ~kwd2
+#' @examples
+#' 
+#' #results <- es2df(eset)
+#' #results
+#' 
 es2df <-
 function(es) {
   ##################################################################

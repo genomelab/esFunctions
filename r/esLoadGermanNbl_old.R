@@ -1,3 +1,20 @@
+#' esLoadGermanNbl_old
+#' 
+#' Automatically load German Neuroblastoma data
+#' 
+#' 
+#' @param type only type tsr (transcript)
+#' @param load_target_subset takes a different annotation r-object dataset
+#' @param excludeYprobes removes probeset that belongs to chromosome y
+#' @author Shahab Asgharzadeh
+#' @references "An Introduction to Bioconductor's ExpressionSet Class" \cr Seth
+#' Falcon, Martin Morgan, and Robert Gentleman \cr 6 October, 2006; revised 9
+#' February, 2007 \cr
+#' @examples
+#' 
+#' #esLoadGermanNbl_old(type = "tsr", load_target_subset = TRUE, excludeYprobes = TRUE)
+#' 
+#' 
 esLoadGermanNbl_old <-
 function(type = "tsr",  load_target_subset=TRUE, excludeYprobes=TRUE) {
   

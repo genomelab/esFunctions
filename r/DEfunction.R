@@ -1,3 +1,12 @@
+#' DEfunction
+#' 
+#' Differential expression comparing each level to the others
+#' 
+#' 
+#' @param y is a vector of data
+#' @param var1 covariate
+#' @param contrastmodel %% ~~Describe \code{contrastmodel} here~~
+#' @author Shahab Asgharzadeh
 DEfunction <-
 function(y, var1, contrastmodel = NULL) {
   ############################################################

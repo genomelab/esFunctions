@@ -1,3 +1,23 @@
+#' esPathwayRun
+#' 
+#' For a given pathway type this will load the curated msidb and call the
+#' esPathwaySig function. This could be applied to any pathway files.
+#' 
+#' 
+#' @param es expression set
+#' @param covar covariate
+#' @param nsim number of simulate. Default to 10. Typically run for 10,000.
+#' @param anovaresults results from anova
+#' @param pathwaytype pathway type, gene set of interest from BROAD Institute
+#' @author Shahab Asgharzadeh
+#' @references "An Introduction to Bioconductor's ExpressionSet Class" \cr Seth
+#' Falcon, Martin Morgan, and Robert Gentleman \cr 6 October, 2006; revised 9
+#' February, 2007 \cr
+#' @keywords ~kwd1 ~kwd2
+#' @examples
+#' 
+#' #esPathwayRun(eset, covar="covariate_of_interest", nsim = 10, anovaresults, pathwaytype = "c2.cp.kegg")
+#' 
 esPathwayRun <-
 function(es, covar, nsim=10, anovaresults, pathwaytype='c2.cp.kegg') {
   msigdb<-NULL  # setting this variable as NULL to pass R CMD check , it was defined in anothe frame and passed into this frame without

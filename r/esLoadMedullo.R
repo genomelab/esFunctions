@@ -1,3 +1,17 @@
+#' esLoadMedullo
+#' 
+#' Automatically load medulloblastoma data, removes chr Y features
+#' 
+#' 
+#' @param type loads transcripts without cell lines
+#' @author Shahab Asgharzadeh
+#' @references "An Introduction to Bioconductor's ExpressionSet Class" \cr Seth
+#' Falcon, Martin Morgan, and Robert Gentleman \cr 6 October, 2006; revised 9
+#' February, 2007 \cr
+#' @examples
+#' 
+#' #medullo <- esLoadMedullo(type="tsr")
+#' 
 esLoadMedullo <- function(type = "tsr") {
   ############################
   ## Function 20

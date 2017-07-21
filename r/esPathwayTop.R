@@ -1,3 +1,23 @@
+#' esPathwayTop
+#' 
+#' Finds Top scoring Pathways (using Score Calculated by multiplying pathway
+#' eucledian distance and SD of Chi2.
+#' 
+#' 
+#' @param esPathwaySig_results pathway analysis results from
+#' \code{esPathwaySig}
+#' @param covarcompare covariate comparison of interest
+#' @param headerprefix columns of interest to be chosen from pathway results
+#' @param fdrlevel level of false discovery rate to be considered
+#' @author Shahab Asgharzadeh
+#' @references "An Introduction to Bioconductor's ExpressionSet Class" \cr Seth
+#' Falcon, Martin Morgan, and Robert Gentleman \cr 6 October, 2006; revised 9
+#' February, 2007 \cr
+#' @keywords ~kwd1 ~kwd2
+#' @examples
+#' 
+#' #esPathwayTop(esPathwaySig_results, covarcompare, headerprefix = "ecu_pw_chi_sd_", fdrlevel = 0.05)
+#' 
 esPathwayTop <-
 function(esPathwaySig_results, covarcompare, headerprefix = "ecu_pw_chi_sd_", fdrlevel=0.05) {
   #### Finds Top scoring Pathways (using Score Calculated by multiplying pathway eucledian distance and SD of Chi2

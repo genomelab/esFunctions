@@ -1,3 +1,24 @@
+#' esPathwayplot
+#' 
+#' This will plot the pathway results based on chi-squared value and the
+#' eucledian distance. Number of top pathways could be labeled with
+#' \code{labeltopsigpaths} option.
+#' 
+#' 
+#' @param esPathwaySig_results pathway analysis results from
+#' \code{esPathwaySig}
+#' @param covarcompare covariate comparison of interest
+#' @param fdrlevel level of false discovery rate to be considered
+#' @param labeltopsigpaths Number of top pathways could be labeled
+#' @author Shahab Asgharzadeh
+#' @references "An Introduction to Bioconductor's ExpressionSet Class" \cr Seth
+#' Falcon, Martin Morgan, and Robert Gentleman \cr 6 October, 2006; revised 9
+#' February, 2007 \cr
+#' @keywords ~kwd1 ~kwd2
+#' @examples
+#' 
+#' #esPathwayplot(esPathwaySig_results, covarcompare, fdrlevel = 0.05, labeltopsigpaths = c(1:5))
+#' 
 esPathwayplot <-
 function(esPathwaySig_results, covarcompare, fdrlevel=0.05, labeltopsigpaths = c(1:5)) {
   #### Collapse the data to get pathway eucledian distance and SD of Chi2

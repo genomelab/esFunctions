@@ -1,3 +1,23 @@
+#' glmfunction
+#' 
+#' Perform differential expression analysis for all possible combination of
+#' from a vector of data and computes the mean, fold change, p-value,
+#' chi-squared values, and generates a score for ranking.
+#' 
+#' 
+#' @param y a vector of data
+#' @param var1 the covariate
+#' @param contrastmodel NULL
+#' @author Shahab Asgharzadeh
+#' @keywords ~kwd1 ~kwd2
+#' @examples
+#' 
+#' #x <- c(2,3,4,7,9,4,10,6,4,2)
+#' #y <- as.factor(c("a","b","c","a","b","c","b","a","c","c"))
+#' #results <- glmfunction(x,y) 
+#' #results 
+#' 
+#' 
 glmfunction <-
 function(y, var1, contrastmodel = NULL) {
   ############################################################

@@ -1,3 +1,25 @@
+#' esFeatures
+#' 
+#' Function that generates information on the features selected
+#' 
+#' 
+#' @param es expression set
+#' @param features typically genes or anything found in the column of
+#' annotation needed
+#' @param column_lookup typically gene_symbol but can be anything in the
+#' annotation file. Returns list with multiple information. The first vector is
+#' the featureNames of the es matching features. The second vector is the
+#' features and featureNames pasted to gether with the underscore
+#' @param anno this is a the annotation data set
+#' @author Shahab Asgharzadeh
+#' @references "An Introduction to Bioconductor's ExpressionSet Class" Seth
+#' Falcon, Martin Morgan, and Robert Gentleman \cr 6 October, 2006; revised 9
+#' February, 2007 \cr
+#' @examples
+#' 
+#' # annot input is dataset containing experiemental data: probe set id, reference gene symbols, ...
+#' #esFeatures(eset, features = "feature_of_interest", column_lookup = "gene_name", annot)
+#' 
 esFeatures <-
 function(es, features='',column_lookup='gene_symbol', anno= annot) {
   ############################################

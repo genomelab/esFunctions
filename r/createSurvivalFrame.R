@@ -1,3 +1,17 @@
+#' createSurvivalFrame
+#' 
+#' Setup a KM frame in ggplot2.
+#' 
+#' 
+#' @param f.survfit dataframe that consist of survival information: overall
+#' survival status and survial days
+#' @author Dr. Shahab Asgharzadeh \cr Janahan Gnanachandran \cr Anthony Colombo
+#' @author Shahab Asgharzadeh
+#' @examples
+#' 
+#' #survivalFrame <- createSurvivalFrame(survfit)
+#' #survivalFrame
+#' 
 createSurvivalFrame <- 
 function(f.survfit){ # initialise frame variable
   previous.theme = theme_set(theme_bw())

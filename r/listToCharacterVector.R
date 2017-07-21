@@ -1,3 +1,12 @@
+#' listToCharacterVector
+#' 
+#' this will change the list to a character vector
+#' 
+#' 
+#' @param lst %% ~~Describe \code{lst} here~~
+#' @param sep separator link
+#' @author Shahab Asgharzadeh
+#' @keywords ~kwd1 ~kwd2
 listToCharacterVector <-
 function (lst, sep = " //// ") {
   isna <- is.na(lst)

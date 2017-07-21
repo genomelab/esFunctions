@@ -1,3 +1,30 @@
+#' esPlotpairs
+#' 
+#' Cuts out the underscore from esAnnotate function and plots it using ggpairs.
+#' Converts to ggplot format for plotting and can also select genes and
+#' covariates that are denoted in the argument.It also can reannotate an
+#' expression set and modify the feature names that can be useful for plotting.
+#' 
+#' 
+#' @param es expression set object
+#' @param select_covar list of covariate (varLabels of the expressionset)
+#' @param features list of genes (featureNames of expressionset)
+#' @param annot annotaiton file to use (for PSR or Transcripts)
+#' @param annotate annotate (TRUE//FALSE) - Changes the featureNames to the
+#' annotation needed
+#' @param drop_endids drop_endids - In changing annotation, need to maintiain
+#' uniqueness, which is done by joining the featureNames with the annotation
+#' (using underscore), if TRUE for plotting purposes, the original featureNames
+#' (ids) are not shown. %% ~~Describe \code{drop_endids} here~~
+#' @author Shahab Asgharzadeh
+#' @references "An Introduction to Bioconductor's ExpressionSet Class" \cr Seth
+#' Falcon, Martin Morgan, and Robert Gentleman \cr 6 October, 2006; revised 9
+#' February, 2007 \cr
+#' @keywords ~kwd1 ~kwd2
+#' @examples
+#' 
+#' #esPlotpairs(eset, select_covar="group_of_interest", features="genes_interest", annot="anno_data", annotate = TRUE, drop_endids = TRUE)
+#' 
 esPlotpairs <-
 function(es, select_covar, features, annot, annotate = TRUE, drop_endids = TRUE) {
   ##################################################################

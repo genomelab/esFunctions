@@ -1,3 +1,23 @@
+#' esPathwaySig
+#' 
+#' Runs the complete pathway analysis for a given expression set and the
+#' pathway of interest.
+#' 
+#' 
+#' @param es expression set
+#' @param covar covariate
+#' @param nsim number of simulate. Default to 10. Typically run for 10,000.
+#' @param anovaresults results from anova
+#' @param msigdb pathway from BROAD Institute
+#' @author Shahab Asgharzadeh
+#' @references "An Introduction to Bioconductor's ExpressionSet Class" \cr Seth
+#' Falcon, Martin Morgan, and Robert Gentleman \cr 6 October, 2006; revised 9
+#' February, 2007 \cr
+#' @keywords ~kwd1 ~kwd2
+#' @examples
+#' 
+#' #esPathwaySig(eset, covar="covariate_of_interest", nsim = 10, anovaresults, msigdb)
+#' 
 esPathwaySig <-
 function(es, covar, nsim=10, anovaresults, msigdb) {
   

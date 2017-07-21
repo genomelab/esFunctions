@@ -1,3 +1,22 @@
+#' esAnovaTop
+#' 
+#' An arrange of inputs. It will take the best results from the argument that
+#' is given through sortby.
+#' 
+#' 
+#' @param es expression set
+#' @param anovaresults dataframe from esanova
+#' @param range Amount of the top results you want
+#' @param sortby column name you want from esanova
+#' @param equal Include values that are equal
+#' @author Shahab Asgharzadeh
+#' @references "An Introduction to Bioconductor's ExpressionSet Class" \cr Seth
+#' Falcon, Martin Morgan, and Robert Gentleman \cr 6 October, 2006; revised 9
+#' February, 2007 \cr
+#' @examples
+#' 
+#' #results <- esAnovaTop(eset, anova_table, range = c(1:some_number), #sortby = "anova_column_interest", equal = FALSE)
+#' 
 esAnovaTop <-
 function(es, anovaresults, range, sortby='abs_score', equal=FALSE) { 
   if(!equal) {

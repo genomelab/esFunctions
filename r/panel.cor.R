@@ -1,3 +1,15 @@
+#' panel.cor
+#' 
+#' this yield a panell
+#' 
+#' 
+#' @param x %% ~~Describe \code{x} here~~
+#' @param y %% ~~Describe \code{y} here~~
+#' @param digits %% ~~Describe \code{digits} here~~
+#' @param prefix %% ~~Describe \code{prefix} here~~
+#' @param cex.cor %% ~~Describe \code{cex.cor} here~~
+#' @author Shahab Asgharzadeh
+#' @keywords ~kwd1 ~kwd2
 panel.cor <-
 function(x, y, digits=2, prefix="", cex.cor) {
   usr <- par("usr"); on.exit(par(usr))

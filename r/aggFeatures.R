@@ -1,3 +1,13 @@
+#' aggFeatures
+#' 
+#' Series of functions to Average over gene symbols, obtained from package
+#' pathRender
+#' 
+#' 
+#' @param fvector this is a full vector that needs splitting
+#' @param splitvar this is the covariate which needs splitting
+#' @param aggfun an internal function in Biobase that is required dependency
+#' @author Shahab Asgharzadeh
 aggFeatures = function( fvector, splitvar, aggfun ) {
   ############################
   ## Series of functions to Average over gene symbols, obtained from package pathRender

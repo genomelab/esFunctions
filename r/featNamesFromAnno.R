@@ -1,3 +1,12 @@
+#' featNamesFromAnno
+#' 
+#' Feature names of an expression set from annotation
+#' 
+#' 
+#' @param annovec annotation vector
+#' @param ann2featMap annotation2map
+#' @author Shahab Asgharzadeh
+#' @keywords ~kwd1 ~kwd2
 featNamesFromAnno <-
 function( annovec, ann2featMap ) {
   if (is(ann2featMap, "AnnDbBimap")) 

@@ -1,3 +1,20 @@
+#' esReduce2
+#' 
+#' ExpressionSet with featureNames
+#' 
+#' 
+#' @param es expression set
+#' @param annovec annotation vector, a collection of annotations
+#' @param ann2featMap is either an AtomicAnnDbBimap with keys in a and range in
+#' f, or a list with element names in a and element values in f
+#' @param pdvname gene symbol
+#' @param collapseFun collapse function, a function that applys to
+#' @author Shahab Asgharzadeh
+#' @keywords ~kwd1 ~kwd2
+#' @examples
+#' 
+#' #esReduce2(eset, annovec, ann2featMap, pdvname = "symbol", collapseFun = NULL)
+#' 
 esReduce2 <-
 function( es, annovec, ann2featMap, pdvname="symbol", collapseFun=NULL ) {
   #

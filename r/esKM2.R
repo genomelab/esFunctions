@@ -1,3 +1,34 @@
+#' esKM2
+#' 
+#' Uses SurvPlot function that gives out info about number of patient censored
+#' at each time.
+#' 
+#' 
+#' @param es expression set
+#' @param kmtime survival time (assumed to be in years, if not convert it to be
+#' in years)
+#' @param kmcens censor indictor (0 alive, 1 for dead)
+#' @param covar covariate
+#' @param n.risk is a logical command. If it is set to \code{TRUE}, then will
+#' add the number of risk from \code{risk.summary} and the numbers are placed
+#' in the bottom.
+#' @param levels.only Set to \code{TRUE} to remove the variable names
+#' @param title title of the analysis
+#' @param xtitle title of the x-axis
+#' @param ytitle title of the y-axis
+#' @param outputdir outputdir
+#' @param filename filename (use if save is set to \code{TRUE}, default is
+#' \code{FALSE})
+#' @param save use if save is set to \code{TRUE}, default is \code{FALSE}
+#' @note Requires package 'SurvPlot'
+#' @author Shahab Asgharzadeh
+#' @references "An Introduction to Bioconductor's ExpressionSet Class" \cr Seth
+#' Falcon, Martin Morgan, and Robert Gentleman \cr 6 October, 2006; revised 9
+#' February, 2007 \cr
+#' @examples
+#' 
+#' #esKM2(eset, kmtime, kmcens, covar = "covariates_of_interest", n.risk = TRUE, levels.only = TRUE, title = "esKM 2", xtitle = "Time", ytitle = "Survival Probability", outputdir, filename, save = FALSE)
+#' 
 esKM2 <-
 function(es, kmtime, kmcens, covar = "" , n.risk=TRUE, levels.only=TRUE, title = "", xtitle = "Time", ytitle = "Survival Probability", outputdir, filename, save=FALSE) {
   

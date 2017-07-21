@@ -1,3 +1,23 @@
+#' General Linear Model
+#' 
+#' Glmfunction calls the in-house "glm" function to include p-value,
+#' chi-squared, means, but does not compare between groups. The calculated
+#' values are only done for a single vector of data.
+#' 
+#' 
+#' @param y the vector of data
+#' @param var1 the covariate (n levels) for ANOVA analyses
+#' @author Shahab Asgharzadeh
+#' @keywords ~kwd1 ~kwd2
+#' @examples
+#' 
+#' #x <- c(2,3,4,7,9,4,10,6,4,2)
+#' #y <- as.factor(c("a","b","c","a","b","c","b","a","c","c"))
+#' #results <- glmfunction_orig(x,y)
+#' #results 
+#'  
+#' 
+#' 
 glmfunction_orig <-
 function(y, var1) {
   ############################################################

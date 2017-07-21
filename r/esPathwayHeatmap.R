@@ -1,3 +1,29 @@
+#' esPathwayHeatmap
+#' 
+#' Plot a heat map for genes belong to a specific pathway using the expression
+#' set and the pathway analysis results.
+#' 
+#' 
+#' @param es expression set
+#' @param covar covariate
+#' @param covargroups covariate groups of interest
+#' @param selpathway select pathway of interest
+#' @param pathwayanalysis pathway analysis results
+#' @param annotate annotation. \code{TRUE} or \code{FALSE}
+#' @param col color palette
+#' @param colorPalette colorPallette has to be a list of vectors, each with
+#' number of colors. By default it creates a recurring list of colors obtained
+#' from global kmPallette, Pallette1, Pallette2 covar should be a list of
+#' characters i.e. c('risk', 'efscens).
+#' @author Shahab Asgharzadeh
+#' @references "An Introduction to Bioconductor's ExpressionSet Class" \cr Seth
+#' Falcon, Martin Morgan, and Robert Gentleman \cr 6 October, 2006; revised 9
+#' February, 2007 \cr
+#' @keywords ~kwd1 ~kwd2
+#' @examples
+#' 
+#' #esPathwayHeatmap(eset, covar="covariate_of_interest", covargroups, selpathway, pathwayanalysis, annotate = TRUE, col = colorRampPalette(c("navy", "white", "firebrick3"))(50))
+#' 
 esPathwayHeatmap <-
 function(es, covar, covargroups , selpathway, pathwayanalysis, annotate=TRUE, col = colorRampPalette(c("navy", "white", "firebrick3"))(50), colorPalette = '') {
   

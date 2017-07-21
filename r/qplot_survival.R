@@ -1,3 +1,26 @@
+#' qplot_survival
+#' 
+#' Draw survival function, needs object survival package, second parameter if
+#' set to \code{TRUE} will display confidence intervals. Use different plotting
+#' commands dependig whether or not strata's are given.
+#' 
+#' 
+#' @param f.frame data frame
+#' @param f.CI data frame of confidence interval. Either \code{default},
+#' \code{TRUE}, or \code{FALSE}
+#' @param f.linesize thickness setting which is set to 1
+#' @param f.shapesize used for the aesthetic setting argument for the "size" in
+#' ggplot
+#' @param f.shape used for the aesthetic setting argument for the "shape" in
+#' ggplot
+#' @param kmcolors color palette
+#' @note Requires package 'ggplot' and 'survival'.
+#' @author Shahab Asgharzadeh
+#' @keywords ~kwd2
+#' @examples
+#' 
+#' #qplot_survival(f.frame, f.CI = "default", f.linesize = 1, f.shapesize = 2.5, f.shape = 3, kmcolors = kmPalette)
+#' 
 qplot_survival <-
 function(f.frame, f.CI="default",f.linesize=1, f.shapesize=2.5, f.shape=3, kmcolors = kmPalette){
   kmPalette<-NULL # setting this variable as NULL to pass R CMD check , it was defined in anothe frame and passed into this frame without

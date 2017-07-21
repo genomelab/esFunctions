@@ -1,3 +1,25 @@
+#' es2esCor
+#' 
+#' Calculates correlation between two es data (have to be the same size and
+#' obviously same rownames).
+#' 
+#' 
+#' @param es1 first expression set
+#' @param es2 second expression set
+#' @param features_es1 select features
+#' @param corrtype Options for this argument: pearson, spearman, kendall.
+#' Recommended spearman.
+#' @param plot Logical command where if TRUE, includes a plot
+#' @author Shahab Asgharzadeh
+#' @references "An Introduction to Bioconductor's ExpressionSet Class" \cr Seth
+#' Falcon, Martin Morgan, and Robert Gentleman \cr 6 October, 2006; revised 9
+#' February, 2007 \cr
+#' @examples
+#' 
+#' #results_cor_obj <- es2esCor(eset1, eset2, features_es1 = NULL, corrtype = "spearman", plot = TRUE)
+#' #results_cor_obj
+#' 
+#' 
 es2esCor <-
 function(es1, es2, features_es1=NULL, corrtype="spearman", plot=TRUE) 
   ### Calculates correlation between two es data (have to be the same size and obviously same rownames)

@@ -1,3 +1,16 @@
+#' queryAE2
+#' 
+#' Gets you the names of the arrays
+#' 
+#' 
+#' @param keywords NULL
+#' @param species NULL
+#' @author Shahab Asgharzadeh
+#' @keywords ~kwd1 ~kwd2
+#' @examples
+#' 
+#' #queryAE2(keywords = NULL, species = NULL)
+#' 
 queryAE2 <-
 function (keywords = NULL, species = NULL) 
   ### Faster version (does not parse details) of arraydata in ArrayExpress

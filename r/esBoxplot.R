@@ -1,4 +1,27 @@
-
+#' esBoxplot
+#' 
+#' Box plot of selected features of an expressionset class, can be categorized
+#' by a covariate
+#' 
+#' 
+#' @param es espression set
+#' @param features feature names of the eset
+#' @param covar covariate of eset
+#' @param annotation Annotation data set that is used to convert the transcript
+#' ID into the gene names
+#' @param colPallette the name of the color pallette used
+#' @param jitter logical command that will create a jitter plot in ggplot2
+#' @param annotate logical command to include the annotation set
+#' @param drop_ends logical command to drop the transcript ID from the gene
+#' names
+#' @author Shahab Asgharzadeh
+#' @references "An Introduction to Bioconductor's ExpressionSet Class" Seth
+#' Falcon, Martin Morgan, and Robert Gentleman \cr 6 October, 2006; revised 9
+#' February, 2007 \cr
+#' @examples
+#' 
+#' #esBoxplot(es, features = "", covar = "", annotation = annot, colPallette = colorPalette("kmPalette2"), jitter = FALSE, annotate = FALSE, drop_ends = FALSE)
+#' 
 esBoxplot = function(es, features = '', covar='', annotation = annot, colPallette = colorPalette('kmPalette2'), jitter=FALSE, annotate=FALSE, drop_ends=FALSE, ...){
   ##########################
   ## esBoxplot

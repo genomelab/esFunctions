@@ -1,3 +1,20 @@
+#' esKmeans
+#' 
+#' esKmeans function finds the kmeans clusters of a expressionset and adds the
+#' cluster info to the covariate file
+#' 
+#' 
+#' @param es expression set
+#' @param kmeans number of clusters assumed and returns an expressionset object
+#' @author Shahab Asgharzadeh
+#' @references "An Introduction to Bioconductor's ExpressionSet Class" \cr Seth
+#' Falcon, Martin Morgan, and Robert Gentleman \cr 6 October, 2006; revised 9
+#' February, 2007 \cr
+#' @examples
+#' 
+#' #results<- esKmeans(eset, kmeans = 2)
+#' #results 
+#' 
 esKmeans <-
 function(es, kmeans=2) { 
   ############################################

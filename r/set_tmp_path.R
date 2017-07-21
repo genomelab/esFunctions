@@ -1,3 +1,9 @@
+#' set_tmp_path
+#' 
+#' this is creating a temporary path used for sourcing
+#' 
+#' 
+#' @keywords ~kwd1 ~kwd2
 set_tmp_path <-
 function() {
   windows_dropboxpath = "./Dropbox//TARGET PROJECT//code//tmp//"

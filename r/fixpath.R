@@ -1,3 +1,11 @@
+#' fixpath
+#' 
+#' this creates a path to the data
+#' 
+#' 
+#' @param x this is the input
+#' @author Shahab Asgharzadeh
+#' @keywords ~kwd1 ~kwd2
 fixpath <-
 function(x) {
   set_tmp_path_data() 

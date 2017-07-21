@@ -1,3 +1,25 @@
+#' esFilter
+#' 
+#' Filter function to filter expression set class. Based on cv of each
+#' expression (greater or less than) certain cv limit and percent of samples
+#' with (greater or less than) certain expression value limit.
+#' 
+#' 
+#' @param es expression set
+#' @param cvlimit coefficient of variance limit
+#' @param cv_i coefficient of variance either 'over' or 'under' the index
+#' @param exprlimit expression limit numeric value
+#' @param exp_i expression index either 'over' or 'under' the index
+#' @param pctsample percentage of samples
+#' @author Shahab Asgharzadeh
+#' @references "An Introduction to Bioconductor's ExpressionSet Class" \cr Seth
+#' Falcon, Martin Morgan, and Robert Gentleman \cr 6 October, 2006; revised 9
+#' February, 2007 \cr
+#' @examples
+#' 
+#' #filter <- esFilter(eset, cvlimit = 0.5, cv_i = "over", exprlimit = 2, exp_i = "over", pctsample = 1)
+#' #filter
+#' 
 esFilter <-
 function(es, cvlimit = 0.5, cv_i = 'over', exprlimit, exp_i = 'over', pctsample = 1) {
   ############################

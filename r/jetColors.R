@@ -1,3 +1,11 @@
+#' jetColors
+#' 
+#' This relates to the color settings
+#' 
+#' 
+#' @param N %% ~~Describe \code{N} here~~
+#' @author Shahab Asgharzadeh
+#' @keywords ~kwd1 ~kwd2
 jetColors <-
 function(N){
   k <- ceiling(N/4)

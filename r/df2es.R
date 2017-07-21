@@ -1,3 +1,17 @@
+#' df2es
+#' 
+#' Converts a dataframe to an expressionset. Assumptions, rows have the
+#' covariate inforamtion in non-numeric values, these rows are converted to
+#' covariate part
+#' 
+#' 
+#' @param es expression set
+#' @author Shahab Asgharzadeh
+#' @examples
+#' 
+#' #data_2_es <- df2es(eset)
+#' #data_2_es
+#' 
 df2es <-
 function(es) 
   ### Converts a dataframe to an expressionset.  

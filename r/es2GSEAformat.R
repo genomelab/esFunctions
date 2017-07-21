@@ -1,3 +1,27 @@
+#' es2GSEAformat
+#' 
+#' Converts Expression set data to .txt format that can be used in Gene Set
+#' Enrichment Analysis (GSEA), a format that is used for differential
+#' expression analysis, from BROAD Institute. Creates the Class label file
+#' (.cls) using the covar variable provided .
+#' 
+#' 
+#' @param es expression set
+#' @param covar The covar label must be in the phenotype data of es.
+#' @param exprfilename expression set file name that requires \code{.txt}
+#' @param classfilename class label file name that requires \code{.cls}
+#' @author Shahab Asgharzadeh
+#' @references "An Introduction to Bioconductor's ExpressionSet Class" \cr Seth
+#' Falcon, Martin Morgan, and Robert Gentleman \cr 6 October, 2006; revised 9
+#' February, 2007 \cr
+#' @examples
+#' 
+#' # es2GSEAformat(eset, covar="features_of_interest", "filename.txt", "filename.cls")
+#' # Writes to current working directory 
+#' # getwd()
+#' # Files will be on that location 
+#' 
+#' 
 es2GSEAformat <-
 function(es, covar, exprfilename, classfilename) {
   ###  Converts Expression set data to .txt format that can be used in GSEA from BROAD

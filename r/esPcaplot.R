@@ -1,3 +1,32 @@
+#' esPcaplot
+#' 
+#' esPCA plot of selected features of an expressionset class
+#' 
+#' 
+#' @param es expression set
+#' @param features features = set of featurenames of the expression set, if
+#' left blank all are used
+#' @param covar used to color the points in the PCA
+#' @param labelvar used to label the points in the PCA
+#' @param pcs used to state which principle components to plot
+#' @param shape TRUE/FALSE. TRUE if you want to add shapes.
+#' @param kmcolors Loads the color palette.
+#' @param scale Logical command that scales the data. TRUE for scale.
+#' @param center Logical command that centers the data. TRUE for center.
+#' @note For argument kmcolors, one can create their own color palette called
+#' kmPalette <- c("red", "blue", "darkgreen", "black", "orange, "yellow4",
+#' "brown", "purple", "grey", "turquoise"). The amount of colors must match the
+#' number of levels.
+#' @author Shahab Asgharzadeh
+#' @references "An Introduction to Bioconductor's ExpressionSet Class" \cr Seth
+#' Falcon, Martin Morgan, and Robert Gentleman \cr 6 October, 2006; revised 9
+#' February, 2007 \cr
+#' @keywords ~kwd1 ~kwd2
+#' @examples
+#' 
+#' # kmcolor, look at the note
+#' #esPcaplot(eset, covar="group_of_interest", shape = FALSE, kmcolors = colorPalette("kmPalette"))
+#' 
 esPcaplot = function(es, features = '', covar='', labelvar='', pcs = c(1,2), shape=FALSE, kmcolors = colorPalette('kmPalette'), scale=TRUE, center=TRUE) {
   ##########################
   ## Function 23

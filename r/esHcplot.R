@@ -1,3 +1,31 @@
+#' esHcplot
+#' 
+#' Generic Heirarchical Clustering using data that are Windsorized. Need to set
+#' winsor levels in the function(levels set at 10 percent and 90 percent).
+#' 
+#' 
+#' @param es expression set
+#' @param features list of features of expression set
+#' @param selcovar selcovar are groups that will be used to determine how to
+#' calculate the fold change
+#' @param base base is the mean level of features from this selcovar group will
+#' be used as base of comparison for all samples.
+#' @param winsor If using Winsor (default), color levels need to be low and
+#' don't need to scale values (normalize with SD 1)
+#' @param title title of the plot
+#' @param scale If you do not winsorize then set scale to True to get regular
+#' heatmap. If scale is said to be true, then we unlog the values and let
+#' heatmap standardize the values and need to pick large number of color
+#' levels.
+#' @note Requires package 'ggplot2'.
+#' @author Shahab Asgharzadeh
+#' @references "An Introduction to Bioconductor's ExpressionSet Class" \cr Seth
+#' Falcon, Martin Morgan, and Robert Gentleman \cr 6 October, 2006; revised 9
+#' February, 2007 \cr
+#' @examples
+#' 
+#' #esHcplot(eset, features = "features_of_interest", selcovar = "covariates_of_interest", base, winsor = TRUE, title = "Expression Set Heirarchical Clustering Plot ", scale = FALSE)
+#' 
 esHcplot <-
 function(es, features, selcovar, base, winsor=TRUE, title="", scale=FALSE) {
   
