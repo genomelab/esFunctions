@@ -12,10 +12,7 @@ export(esAddPheno_OnevsOthers)
 export(esAnnotate)
 export(esAnova)
 export(esAnovaTop)
-<<<<<<< HEAD
 export(esBoxplot)
-=======
->>>>>>> 27d3166f74787ff42b4f8444a3a7e8302b1d1096
 export(esCreate)
 export(esDE)
 export(esDropPheno)
