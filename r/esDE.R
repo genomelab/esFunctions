@@ -7,7 +7,7 @@
 #' expression matrix of the expressionset to the returned table. Generates
 #' comparison between 2 groups only.
 #' 
-#' 
+#' @export
 #' @param es expression set object
 #' @param covar is a variable to include in the ANOVA model y ~ covar
 #' @param base indicates which of the covar levels should be used as the base

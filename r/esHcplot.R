@@ -3,7 +3,7 @@
 #' Generic Heirarchical Clustering using data that are Windsorized. Need to set
 #' winsor levels in the function(levels set at 10 percent and 90 percent).
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @param features list of features of expression set
 #' @param selcovar selcovar are groups that will be used to determine how to

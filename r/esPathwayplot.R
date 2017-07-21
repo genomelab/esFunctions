@@ -4,7 +4,7 @@
 #' eucledian distance. Number of top pathways could be labeled with
 #' \code{labeltopsigpaths} option.
 #' 
-#' 
+#' @export
 #' @param esPathwaySig_results pathway analysis results from
 #' \code{esPathwaySig}
 #' @param covarcompare covariate comparison of interest

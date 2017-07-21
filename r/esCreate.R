@@ -4,7 +4,7 @@
 #' file. \cr Column names of gene expression matrix must match the row names of
 #' covariate file.
 #' 
-#' 
+#' @export
 #' @param aptfile Gene expression matrix as a dataframe
 #' @param covfile Covariate file describes the sample information
 #' @param match Match is set to false and check if the column names of gene

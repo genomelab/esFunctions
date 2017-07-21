@@ -5,7 +5,7 @@
 #' covariates that are denoted in the argument.It also can reannotate an
 #' expression set and modify the feature names that can be useful for plotting.
 #' 
-#' 
+#' @export
 #' @param es expression set object
 #' @param select_covar list of covariate (varLabels of the expressionset)
 #' @param features list of genes (featureNames of expressionset)

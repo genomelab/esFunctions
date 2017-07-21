@@ -3,7 +3,7 @@
 #' NMF for expressionset, returns a covariate vector. Non-Negative Matrix
 #' Factorization (NMF) factorize a matrix V into two non-negative matrices WH.
 #' 
-#' 
+#' @export
 #' @param es expression set with all positive values
 #' @param k is the rank, which is a specification of a single numeric value.
 #' The the maximum linear independent columns of matrix A. You can determine

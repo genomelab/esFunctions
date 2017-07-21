@@ -2,7 +2,7 @@
 #' 
 #' this is for reading and copying inputs
 #' 
-#' 
+#' @export
 #' @param header %% ~~Describe \code{header} here~~
 #' @param \dots %% ~~Describe \code{\dots} here~~
 #' @author Shahab Asgharzadeh

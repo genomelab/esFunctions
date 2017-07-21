@@ -2,7 +2,7 @@
 #' 
 #' Converting Expressionset to a dataframe
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @author Shahab Asgharzadeh
 #' @references "An Introduction to Bioconductor's ExpressionSet Class" Seth

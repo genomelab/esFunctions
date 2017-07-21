@@ -14,6 +14,7 @@
 #' column names of c vector that equal ycolmatch and that will be used in the
 #' by. parameter.
 #' 
+#' @export
 #' @param es expression set
 #' @param cvector a list of vector
 #' @param colname label of the variable to be put in the pData of

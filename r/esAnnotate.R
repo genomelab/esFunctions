@@ -14,7 +14,7 @@
 #' esAnnotate does not average the duplicates, but keeps all the gene names as
 #' independent entries and keeps the transcript ID as a subscript.
 #' 
-#' 
+#' @export
 #' @param es expression set object
 #' @param annot is an annotation object (first column is the probe_id). Returns
 #' expression set object that has been reannotated (i.e. featureNames have been

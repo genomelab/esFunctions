@@ -4,7 +4,7 @@
 #' expression (greater or less than) certain cv limit and percent of samples
 #' with (greater or less than) certain expression value limit.
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @param cvlimit coefficient of variance limit
 #' @param cv_i coefficient of variance either 'over' or 'under' the index

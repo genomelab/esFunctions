@@ -3,7 +3,7 @@
 #' Box plot of selected features of an expressionset class, can be categorized
 #' by a covariate
 #' 
-#' 
+#' @export
 #' @param es espression set
 #' @param features feature names of the eset
 #' @param covar covariate of eset

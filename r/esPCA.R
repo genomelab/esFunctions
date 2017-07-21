@@ -8,6 +8,7 @@
 #' into a new expression set.  It is usually helpful to then plot the PC1 and
 #' PC2 on a new plane for analysis.
 #' 
+#' @export
 #' @param es es is the Expression Set that is coupled with the covariate
 #' matrix.
 #' @param features The features are the gene names or transcript ID's , or the

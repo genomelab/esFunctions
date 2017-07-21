@@ -2,7 +2,7 @@
 #' 
 #' Create a common gene expressionset
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @param annot is an annotation object (first column is the probe_id)
 #' @author hahab Asgharzadeh

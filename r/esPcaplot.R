@@ -2,7 +2,7 @@
 #' 
 #' esPCA plot of selected features of an expressionset class
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @param features features = set of featurenames of the expression set, if
 #' left blank all are used

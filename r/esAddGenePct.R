@@ -4,7 +4,7 @@
 #' the expression set and adds it to the pheno data of the expressionset
 #' limiting it to 20 genes.
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @param variable custom selection of percentiles. If variable is set to
 #' FALSE, which is default value, it will generate quartiles, medians, and

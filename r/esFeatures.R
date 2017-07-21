@@ -2,7 +2,7 @@
 #' 
 #' Function that generates information on the features selected
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @param features typically genes or anything found in the column of
 #' annotation needed

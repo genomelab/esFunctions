@@ -3,7 +3,7 @@
 #' Automatically load target microarray data and removes Y chromosome features.
 #' The function also loads an annotation matrix.
 #' 
-#' 
+#' @export
 #' @param type 4 types: tsr (transcript), psr (probe script), avgaffy (average
 #' transcript base on affy notation), avgref (average transcript based on ref
 #' gene)

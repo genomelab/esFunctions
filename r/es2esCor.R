@@ -3,7 +3,7 @@
 #' Calculates correlation between two es data (have to be the same size and
 #' obviously same rownames).
 #' 
-#' 
+#' @export
 #' @param es1 first expression set
 #' @param es2 second expression set
 #' @param features_es1 select features

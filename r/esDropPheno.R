@@ -2,7 +2,7 @@
 #' 
 #' Function to drop a column of the phenoData of expressionset
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @param column_number specify a column number and removes it from the
 #' dataframe

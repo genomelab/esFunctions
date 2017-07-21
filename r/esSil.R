@@ -4,7 +4,7 @@
 #' 'cluster'. It adds the NMF cluster and silhouette width in the es dataframe
 #' (using covar_name + cluster or sil_width)
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @param clusters Number of clusters
 #' @param covar_name covariate name

@@ -3,7 +3,7 @@
 #' Uses SurvPlot function that gives out info about number of patient censored
 #' at each time.
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @param kmtime survival time (assumed to be in years, if not convert it to be
 #' in years)

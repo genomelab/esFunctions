@@ -4,6 +4,7 @@
 #' features of an expressionset class in 3D.
 #' 
 #' 
+#' @export
 #' @param es es = eset name
 #' @param features features = set of featurenames of the expression set, if
 #' left blank all are used

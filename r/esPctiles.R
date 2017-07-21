@@ -4,7 +4,7 @@
 #' percentiles i.e. Calculate empirical continous desnity function and create a
 #' expression set based on that.
 #' 
-#' 
+#' @export
 #' @param eset expression set
 #' @author Shahab Asgharzadeh
 #' @references "An Introduction to Bioconductor's ExpressionSet Class" \cr Seth

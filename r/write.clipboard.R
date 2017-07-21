@@ -2,7 +2,7 @@
 #' 
 #' this is for copying inputs
 #' 
-#' 
+#' @export
 #' @param x this writes an input ready to be copied
 #' @param col.names this is a logical command
 #' @keywords ~kwd1 ~kwd2

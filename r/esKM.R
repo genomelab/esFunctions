@@ -2,7 +2,7 @@
 #' 
 #' Wrapper for qplot_survival function
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @param kmtime survival time (assumed to be in years, if not convert it to be
 #' in years)

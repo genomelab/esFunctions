@@ -3,7 +3,7 @@
 #' Find high cv genes within the dataset from each biological subgroup from es
 #' data
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @param covar covariate
 #' @param extracovargroup extra covariate group. Default to \code{NULL} . If

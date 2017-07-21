@@ -4,7 +4,7 @@
 #' MySQL. Creates the Class label file (.cls) using the covar variable
 #' provided. The covar label must be in the phenotype data of es.
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @param exprfilename expression set file name that you will write to a table,
 #' but only the expression assay data. Requires (\code{.txt})

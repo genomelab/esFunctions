@@ -3,7 +3,7 @@
 #' Finds nearest genes by variety of correlation types from a expressionset
 #' class
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @param features gene_symbols or other features of interest
 #' @param numb_corr number of correlations to find

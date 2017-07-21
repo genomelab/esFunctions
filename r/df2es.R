@@ -4,7 +4,7 @@
 #' covariate inforamtion in non-numeric values, these rows are converted to
 #' covariate part
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @author Shahab Asgharzadeh
 #' @examples
