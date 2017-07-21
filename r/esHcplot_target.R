@@ -4,7 +4,7 @@
 #' map of HC and can have columns representing phenotypes on top row,
 #' specifically written for TARGET data.
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @param features the rows of the expression set
 #' @param selcovar select covariate group of interest that you want label on

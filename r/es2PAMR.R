@@ -2,7 +2,7 @@
 #' 
 #' Sets up a list to be used for PAMR
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @param covar1 1st covariate
 #' @param covar2 2nd covariate

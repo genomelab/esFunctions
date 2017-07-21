@@ -4,7 +4,7 @@
 #' where the rows are the features of the expression set and the columns are
 #' the covariate.
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @param covar ccovariate
 #' @param rownames Default setting is NULL. Give every feature names. If it is

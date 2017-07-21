@@ -6,7 +6,7 @@
 #' the score (fc * x2) and absolute of the score, it adds the rownames of the
 #' expression matrix of the expressionset to the returned table.
 #' 
-#' 
+#' @export
 #' @param es expression set object
 #' @param covar is a variable to include in the ANOVA model y ~ covar
 #' @param base indicates which of the covar levels should be used as the base

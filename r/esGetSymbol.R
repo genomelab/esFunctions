@@ -3,7 +3,7 @@
 #' Get the symbols from a gene list that has been annotated (i.e.
 #' GENE__ProbeId)
 #' 
-#' 
+#' @export
 #' @param annotatedlist argument from an annotated list that has gene symbols
 #' merged with transcript ids with underscore. For example, some esets will
 #' have duplicate genes for various transcript ids, so by calling the function,

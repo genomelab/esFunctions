@@ -3,7 +3,7 @@
 #' Runs the complete pathway analysis for a given expression set and the
 #' pathway of interest.
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @param covar covariate
 #' @param nsim number of simulate. Default to 10. Typically run for 10,000.

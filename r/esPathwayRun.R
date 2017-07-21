@@ -3,7 +3,7 @@
 #' For a given pathway type this will load the curated msidb and call the
 #' esPathwaySig function. This could be applied to any pathway files.
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @param covar covariate
 #' @param nsim number of simulate. Default to 10. Typically run for 10,000.

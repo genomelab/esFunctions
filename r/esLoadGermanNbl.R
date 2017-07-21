@@ -3,7 +3,7 @@
 #' Load Function and automatically load target data. Then, removes Y chromosome
 #' features.
 #' 
-#' 
+#' @export
 #' @param type 4 types: tsr (transcript), psr (probe script), avgaffy (average
 #' transcript base on affy notation), avgref (average transcript based on ref
 #' gene)

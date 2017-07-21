@@ -2,7 +2,7 @@
 #' 
 #' Automatically load medulloblastoma data, removes chr Y features
 #' 
-#' 
+#' @export
 #' @param type loads transcripts without cell lines
 #' @author Shahab Asgharzadeh
 #' @references "An Introduction to Bioconductor's ExpressionSet Class" \cr Seth

@@ -3,7 +3,7 @@
 #' Plot a heat map for genes belong to a specific pathway using the expression
 #' set and the pathway analysis results.
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @param covar covariate
 #' @param covargroups covariate groups of interest

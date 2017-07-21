@@ -3,7 +3,7 @@
 #' Finds Top scoring Pathways (using Score Calculated by multiplying pathway
 #' eucledian distance and SD of Chi2
 #' 
-#' 
+#' @export
 #' @param esPathwaySig_results pathway analysis results from
 #' \code{esPathwaySig}
 #' @param pathname pathname of interest

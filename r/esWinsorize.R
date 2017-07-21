@@ -4,7 +4,7 @@
 #' outliers, such that if the outlier past either bound, it is given a constant
 #' value at the bound, as opposed its real value as an outlier.
 #' 
-#' 
+#' @export
 #' @param es expression set %% ~~Describe \code{es} here~~
 #' @param subtractcovar If the base is specificed and the subtractcovar set to
 #' TRUE, then it will find the base of the selected covariate and it will apply

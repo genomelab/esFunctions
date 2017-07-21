@@ -2,7 +2,7 @@
 #' 
 #' loaded data from U133 NBL
 #' 
-#' 
+#' @export
 #' @param type this is the type of load, tsr is default
 #' @param excludeYprobes logical command for excluding certain probes in Y
 #' @author Shahab Asgharzadeh

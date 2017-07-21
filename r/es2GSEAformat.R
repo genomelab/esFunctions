@@ -5,7 +5,7 @@
 #' expression analysis, from BROAD Institute. Creates the Class label file
 #' (.cls) using the covar variable provided .
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @param covar The covar label must be in the phenotype data of es.
 #' @param exprfilename expression set file name that requires \code{.txt}

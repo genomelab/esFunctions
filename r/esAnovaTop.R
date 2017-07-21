@@ -3,7 +3,7 @@
 #' An arrange of inputs. It will take the best results from the argument that
 #' is given through sortby.
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @param anovaresults dataframe from esanova
 #' @param range Amount of the top results you want

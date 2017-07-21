@@ -6,7 +6,7 @@
 #' in covar). The labels will be combine_x1 (where x1 is name of the variable
 #' in covar)
 #' 
-#' 
+#' @export
 #' @param es expression set
 #' @param covar covariate
 #' @author Shahab Asgharzadeh
