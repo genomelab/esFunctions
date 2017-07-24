@@ -31,20 +31,20 @@ function(es, features = '', covar='', annotation = annot, colPallette = colorPal
   annot=NULL #this solves the note that comes from R CMD check, that says
   #the "no visible global function definition for annot"
   
+  
   orderfeatures = features
   if (!annotate) {
     if(length(features)==0) {features = featureNames(es)}
     mod_features = features
     names = featureNames(es)  
-  } 
-  else
+  }  else
   {
     ### Subset the expressionset based on the genes or features
     ### annotate the expressionset first, find the genes, subset the expressionset
     ### then convert to ggplot format
     ##Reannotation and finding genes of interest
-    es = esAnnotate(es,annot=annotation)
-    mod_features = unlist((esFeatures(es, features,anno=annot)[2]))
+    es = esAnnotate(es, annot=annotation)
+    mod_features = unlist((esFeatures(es, features,anno=annotation)[2]))
     
     #names = as.data.frame(matrix(unlist(strsplit(featureNames(es), split = "__")), ncol=2, byrow=TRUE))
     #if (any(names$V1 %in% features)) {
@@ -138,11 +138,11 @@ function(es, features = '', covar='', annotation = annot, colPallette = colorPal
       geom_boxplot() + 
       xlab("Genes") + 
       ylab("Expression Value") +
-      ylim(0, max(gges$value))+
+      #ylim(0, max(gges$value))+
       theme(axis.title.x = element_text(face="bold",  vjust=-.3, size=20), 
-            axis.title.y = element_text(face="bold", angle=90, size=20),
-            axis.text.x  = element_text(angle=90, size=16),
-            axis.text.y = element_text(size=16)) +
+           axis.title.y = element_text(face="bold", angle=90, size=20),
+           axis.text.x  = element_text(angle=90, size=16),
+           axis.text.y = element_text(size=16)) +
       scale_x_discrete(breaks=names(variable_order), 
                        labels=variable_order) +
       scale_fill_manual(values=colPallette)
@@ -163,11 +163,11 @@ function(es, features = '', covar='', annotation = annot, colPallette = colorPal
         geom_boxplot(position=position_dodge(width=.8)) + 
         xlab("Genes") + 
         ylab("Expression Value") +
-        ylim(0, max(gges$value))+
+        #ylim(0, max(gges$value))+
         theme(axis.title.x = element_text(face="bold",  vjust=-.6, size=20), 
-              axis.title.y = element_text(face="bold", angle=90, size=20),
-              axis.text.x  = element_text(angle=90, size=16),
-              axis.text.y = element_text(size=16)) 
+             axis.title.y = element_text(face="bold", angle=90, size=20),
+             axis.text.x  = element_text(angle=90, size=16),
+             axis.text.y = element_text(size=16)) 
     }
     else
     {
@@ -176,11 +176,11 @@ function(es, features = '', covar='', annotation = annot, colPallette = colorPal
         geom_boxplot(aes_string(fill=covar), position=position_dodge(width=.8)) + 
         xlab("Genes") + 
         ylab("Expression Value") +
-        ylim(0, max(gges$value))+
+        #ylim(0, max(gges$value))+
         theme(axis.title.x = element_text(face="bold",  vjust=-.6, size=20), 
-              axis.title.y = element_text(face="bold", angle=90, size=20),
-              axis.text.x  = element_text(angle=90, size=16),
-              axis.text.y = element_text(size=16)) +
+             axis.title.y = element_text(face="bold", angle=90, size=20),
+             axis.text.x  = element_text(angle=90, size=16),
+             axis.text.y = element_text(size=16)) +
         scale_fill_manual(values=colPallette)
     }
     
