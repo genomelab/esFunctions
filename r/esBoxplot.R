@@ -23,7 +23,8 @@
 #' #esBoxplot(es, features = "", covar = "", annotation = annot, colPallette = colorPalette("kmPalette2"), jitter = FALSE, annotate = FALSE, drop_ends = FALSE)
 #' 
 esBoxplot <-
-function(es, features = '', covar='', annotation = annot, colPallette = colorPalette('kmPalette2'), jitter=FALSE, annotate=FALSE, drop_ends=FALSE, ...){
+function(es, features = '', covar='', annotation = annot, colPallette = colorPalette('kmPalette2'), jitter=FALSE, 
+         annotate=FALSE, drop_ends=TRUE, ...){
   ##########################
   ## esBoxplot
   ## Box plot of selected features of an expressionset class, can be categorized by a covariate
