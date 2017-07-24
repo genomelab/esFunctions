@@ -141,7 +141,6 @@ function(es, features = '', covar='', annotation = annot, colPallette = colorPal
                width = 0.5) + 
       xlab("Genes") + 
       ylab("Expression Value") +
-
       #ylim(0, max(gges$value))+
       theme(axis.title.x = element_text(face="bold",  vjust=-.3, size=20), 
            axis.title.y = element_text(face="bold", angle=90, size=20),
@@ -181,7 +180,6 @@ function(es, features = '', covar='', annotation = annot, colPallette = colorPal
       p = ggplot(aes_string(x=variable, y=value), data=gges) +     
         geom_boxplot(aes_string(fill=covar), position=position_dodge(width=.8), width=0.5) + 
         xlab("Genes") + 
-        width = 0.5,
         #ylim(0, max(gges$value))+
         theme(axis.title.x = element_text(face="bold",  vjust=-.6, size=20), 
              axis.title.y = element_text(face="bold", angle=90, size=20),
