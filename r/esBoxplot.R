@@ -174,7 +174,7 @@ function(es, features = '', covar='', annotation = annot, colPallette = colorPal
     {
       
       p = ggplot(aes_string(x=variable, y=value), data=gges) +     
-        geom_boxplot(aes_string(fill=covar), position=position_dodge(width=.4)) + 
+        geom_boxplot(aes_string(fill=covar)) + 
         xlab("Genes") + 
         #ylim(0, max(gges$value))+
         theme(axis.title.x = element_text(face="bold",  vjust=-.6, size=20), 
