@@ -139,6 +139,8 @@ function(es, features = '', covar='', annotation = annot, colPallette = colorPal
       geom_boxplot() + 
       xlab("Genes") + 
       ylab("Expression Value") +
+      position = position_dodge(width = 1), 
+      width = 0.5,
       #ylim(0, max(gges$value))+
       theme(axis.title.x = element_text(face="bold",  vjust=-.3, size=20), 
            axis.title.y = element_text(face="bold", angle=90, size=20),
@@ -146,7 +148,7 @@ function(es, features = '', covar='', annotation = annot, colPallette = colorPal
            axis.text.y = element_text(size=16)) +
       scale_x_discrete(breaks=names(variable_order), 
                        labels=variable_order) +
-      scale_fill_manual(values=colPallette)
+      scale_fill_manual(values=colPallette) 
     if (jitter) {p = p + geom_jitter(); print(p)} 
     else {print(p)}
   }
@@ -164,6 +166,8 @@ function(es, features = '', covar='', annotation = annot, colPallette = colorPal
         geom_boxplot(position=position_dodge(width=.8)) + 
         xlab("Genes") + 
         ylab("Expression Value") +
+        position = position_dodge(width = 1), 
+        width = 0.5,
         #ylim(0, max(gges$value))+
         theme(axis.title.x = element_text(face="bold",  vjust=-.6, size=20), 
              axis.title.y = element_text(face="bold", angle=90, size=20),
@@ -177,6 +181,8 @@ function(es, features = '', covar='', annotation = annot, colPallette = colorPal
         geom_boxplot(aes_string(fill=covar), position=position_dodge(width=.8)) + 
         xlab("Genes") + 
         ylab("Expression Value") +
+        position = position_dodge(width = 1), 
+        width = 0.5,
         #ylim(0, max(gges$value))+
         theme(axis.title.x = element_text(face="bold",  vjust=-.6, size=20), 
              axis.title.y = element_text(face="bold", angle=90, size=20),
