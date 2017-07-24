@@ -137,8 +137,8 @@ function(es, features = '', covar='', annotation = annot, colPallette = colorPal
     
     p = ggplot(aes_string(x=variable, y=value, fill=covar), data=gges) + 
       geom_boxplot(
-               position = position_dodge(width = 1), 
-               width = 0.5,) + 
+               position = position_dodge(width = .8), 
+               width = 0.5) + 
       xlab("Genes") + 
       ylab("Expression Value") +
 
@@ -165,8 +165,8 @@ function(es, features = '', covar='', annotation = annot, colPallette = colorPal
       theme_set(theme_grey())
       p = ggplot(aes_string(x=variable, y=value), data=gges) +     
         geom_boxplot(
-               position = position_dodge(width = 1), 
-               width = 0.5,) + 
+               position = position_dodge(width = .8), 
+               width = 0.5) + 
         xlab("Genes") + 
         ylab("Expression Value") +
         #ylim(0, max(gges$value))+
@@ -179,7 +179,7 @@ function(es, features = '', covar='', annotation = annot, colPallette = colorPal
     {
       
       p = ggplot(aes_string(x=variable, y=value), data=gges) +     
-        geom_boxplot(aes_string(fill=covar), position=position_dodge(width=1), width=0.5) + 
+        geom_boxplot(aes_string(fill=covar), position=position_dodge(width=.8), width=0.5) + 
         xlab("Genes") + 
         width = 0.5,
         #ylim(0, max(gges$value))+
