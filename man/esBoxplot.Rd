@@ -6,7 +6,7 @@
 \usage{
 esBoxplot(es, features = "", covar = "", annotation = annot,
   colPallette = colorPalette("kmPalette2"), jitter = FALSE,
-  annotate = FALSE, drop_ends = FALSE, ...)
+  annotate = FALSE, drop_ends = TRUE, ...)
 }
 \arguments{
 \item{es}{espression set}
