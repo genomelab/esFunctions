@@ -48,6 +48,9 @@ esPcaplot = function(es, features = '', covar='', labelvar='', pcs = c(1,2), sha
   
   target.PC = prcomp(t(exprs(es)), scale=scale, center=center)
   target.scores = predict(target.PC)
+  eigs <- target.PC$sdev^2
+  PC1var = round(100* eigs[1] / sum(eigs), 1)
+  PC2var = round(100* eigs[2] / sum(eigs), 1)
   pheno = cbind(pData(es), sample = rownames(pData(es)))
   targetPCA = merge(target.scores,pheno,by.x = 0,by.y = 0)
   rownames(targetPCA) = targetPCA[[1]]
@@ -86,14 +89,16 @@ esPcaplot = function(es, features = '', covar='', labelvar='', pcs = c(1,2), sha
   
   PCx = paste("PC", pcs[1], sep='')
   PCy = paste("PC", pcs[2], sep='')
+  PCxlab = paste("PC", pcs[1], " (Variance ", as.character(PC1var), "%)", sep='')
+  PCylab = paste("PC", pcs[2], " (Variance ", as.character(PC2var), "%)", sep='')
   
   ### Draw the PC1 and PC2 plot
   previous.theme = theme_set(theme_bw()) #set black and white ggplot theme
   
   if(!shape){
     p = ggplot(aes_string(x=PCx, y=PCy), data=targetPCA) + 
-      labs(x = PCx) + 
-      labs(y = PCy) + 
+      labs(x = PCxlab) + 
+      labs(y = PCylab) + 
       labs(title = '', size = 18, legend.position = "right") +
       scale_colour_manual(values=kmcolors) +
       geom_point(color="grey50", size = 5) +
@@ -111,8 +116,8 @@ esPcaplot = function(es, features = '', covar='', labelvar='', pcs = c(1,2), sha
   {
     
     p = ggplot(aes_string(x=PCx, y=PCy), data=targetPCA) +
-      labs(x = PCx) + 
-      labs(y = PCy) + 
+      labs(x = PCxlab) + 
+      labs(y = PCylab) + 
       labs(title = '', size = 18, legend.position = "right") +
       scale_colour_manual(values=kmcolors) +
       #geom_point(color="black", size = 5.5) +
