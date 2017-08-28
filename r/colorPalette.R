@@ -7,6 +7,10 @@
 #' @param n n is the name of the color palette that one needs
 colorPalette = function(n) {
   switch(n,
+         "largePalette" = c('firebrick2', 	'limegreen', 	'gold', 	'deepskyblue3', 	'chocolate1', 	'darkorchid', 	
+                            'turquoise', 	'magenta2', 	'olivedrab1', 	'rosybrown1', 	'turquoise4', 	'plum2', 	'sienna', 	
+                            'lemonchiffon', 	'darkred', 	'red4', 	'darkseagreen1', 	'gold4', 	'yellow4', 	'navy', 	'gray50', 	
+                            'gray100', 	'black', 	'gray0'),
          "kmPalette" = c('red', 'blue', 'darkgreen', 'black', 'orange', 'yellow4', 'brown', 'purple', 'grey', 'turquoise'),
          "kmPalette2" = c('darkgreen', 'blue', 'red', 'black', 'orange', 'yellow4', 'brown', 'purple', 'grey', 'turquoise'),
          'cbbPalette' = c( GetColorHex('darkgreen'), GetColorHex('blue'), GetColorHex('red'), GetColorHex('black'),
