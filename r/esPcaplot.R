@@ -27,7 +27,8 @@
 #' # kmcolor, look at the note
 #' #esPcaplot(eset, covar="group_of_interest", shape = FALSE, kmcolors = colorPalette("kmPalette"))
 #' 
-esPcaplot = function(es, features = '', covar='', labelvar='', pcs = c(1,2), shape=FALSE, kmcolors = colorPalette('kmPalette'), scale=TRUE, center=TRUE) {
+esPcaplot = function(es, features = '', covar='', labelvar='', pcs = c(1,2), shape=FALSE, kmcolors = colorPalette(c("red", "blue", 
+"darkgreen", "black", "orange", "yellow4","brown", "purple", "grey", "turquoise")), scale=TRUE, center=TRUE) {
   ##########################
   ## Function 23
   ## esPcaplot
