@@ -49,13 +49,10 @@ esPcaplot = function(es, features = '', covar='', labelvar='', pcs = c(1,2), sha
   target.PC = prcomp(t(exprs(es)), scale=scale, center=center)
   target.scores = predict(target.PC)
   eigs <- target.PC$sdev^2
-<<<<<<< HEAD
+
   PC1var = round(100* eigs[1] / sum(eigs), 1)
   PC2var = round(100* eigs[2] / sum(eigs), 1)
-=======
-  PC1var  = eigs[1] / sum(eigs)
-  PC2var  = eigs[2] / sum(eigs)
->>>>>>> 47f761795b3a9fa0d0b110457378d411b26211d1
+
   pheno = cbind(pData(es), sample = rownames(pData(es)))
   targetPCA = merge(target.scores,pheno,by.x = 0,by.y = 0)
   rownames(targetPCA) = targetPCA[[1]]
@@ -92,15 +89,11 @@ esPcaplot = function(es, features = '', covar='', labelvar='', pcs = c(1,2), sha
   #typeof(targetPCA)
   #attach(target.PCA)
   
-<<<<<<< HEAD
+
   PCx = paste("PC", pcs[1], sep='')
   PCy = paste("PC", pcs[2], sep='')
   PCxlab = paste("PC", pcs[1], " (Variance ", as.character(PC1var), "%)", sep='')
   PCylab = paste("PC", pcs[2], " (Variance ", as.character(PC2var), "%)", sep='')
-=======
-  PCx = paste("PC", pcs[1], " (Variance ", PC1var, "%", sep='')
-  PCy = paste("PC", pcs[2], " (Variance ", PC2var, "%", sep='')
->>>>>>> 47f761795b3a9fa0d0b110457378d411b26211d1
   
   ### Draw the PC1 and PC2 plot
   previous.theme = theme_set(theme_bw()) #set black and white ggplot theme
